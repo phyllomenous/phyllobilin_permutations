@@ -1,5 +1,3 @@
-### 09.06.2020
-### Damian Menghini
 ### Creates list of theoretical phyllobilins by adding combinations of modifications to a pyro RCC
 
 
@@ -17,23 +15,7 @@ setwd("~/Botinst/2019 PhD/Scripts R/20200120_Plant phyllobilins/20200504_Fragmen
 modifications_file <- "20200609_PhyllobilinModifications.xlsx"
 modifications.df <- read.xlsx(modifications_file)
 
-##### DEFINE PARAMETERS #####
 
-# basicformula <- "C35H38N4O7" # RCC
-# chemformula <- "CO2"
-# 
-# elementletters <- c("C",
-#                     "H",
-#                     "N",
-#                     "O")
-# elementmasses <- c(12.0000000000,
-#                    1.0078250321,
-#                    14.0030740052,
-#                    15.9949146221)
-# 
-# periodictable.df <- data.frame(elementletters, elementmasses) # combine the two vectors into data frame
-# names(periodictable.df) <- c("Element", "Mass")
-# str(periodictable.df)
 
 ##### DEFINE FUNCTIONS #####
 
@@ -249,7 +231,7 @@ HypotheticalPhyllobilins.df <- cbind(HypotheticalPhyllobilins.df, modcombo.df)
 HypotheticalPhyllobilins.df <- distinct(HypotheticalPhyllobilins.df) # remove duplicates
 
 # Rename columns
-myorder <- c("CataboliteMass", "CataboliteFormula", "C1", "C2", "C2/C4", "C3-2", "C6/C7", "C8-2", "C12-3", "C15", "C18", "C3-2/C12-3") # define order of the columns
+myorder <- c("CataboliteMass", "CataboliteFormula", "C1", "C2-1", "C2/C4", "C3-2", "C6/C7", "C8-2", "C12-3", "C15", "C18", "C3-2/C12-3") # define order of the columns
 HypotheticalPhyllobilins.df <- HypotheticalPhyllobilins.df %>% # reorder columns, so it has the same order as "HypotheticalFragments" data frame
   select(myorder)
 
