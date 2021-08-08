@@ -1,6 +1,3 @@
-### 15.06.2020
-### Damian Menghini
-###
 ### Creates data frame of hypothetical MSMS fragment ions by combinations of
 ### modifications to fragments of an unmodifiec NCC
 
