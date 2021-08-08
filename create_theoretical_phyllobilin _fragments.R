@@ -7,14 +7,18 @@ library(stringr)
 library(tidyverse)
 library(plyr)
 
-setwd("~/Botinst/2019 PhD/Scripts R/20200120_Plant phyllobilins/20200504_Fragmentation")
+
+## set your working directory
+
+yourwd <- ""
+setwd(yourwd)
 
 
 ##### DEFINE INPUT FILES AND IMPORT DATA #####
 
+# List of known phyllobilin modifications
 modifications_file <- "20200609_PhyllobilinModifications.xlsx"
 modifications.df <- read.xlsx(modifications_file)
-# modifications.df_columns <- c("")
 
 reportedfragments_file <- "Chlorophyll catabolite MSMS fragments.xlsx"
 reportedfragments.df <- read.xlsx((reportedfragments_file))
@@ -320,12 +324,6 @@ modificationcombos <- function(modifications.df, fragmentskeletons.df) {
   # names(mydataframe.df) <- c("Ring", "MassOfModification", "NameOfModification", "Formula")
   return(mydataframe.df)
 }
-
-
-
-
-
-
 
 
 
